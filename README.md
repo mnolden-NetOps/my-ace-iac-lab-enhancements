@@ -1,17 +1,17 @@
-# ace-iac-day-zero (Lab 1 and Lab 2)
-
+# ace-iac-test-enhancements
 This repository builds out the following infrastructure for the Aviatrix ACE IaC course:
 
 - Aviatrix Transit in AWS
 - Aviatrix Spoke in AWS
+- Aviatrix Transit in Azure
 - Aviatrix Spoke in Azure
 - Ubuntu VMs with password authentication (1 per spoke)
 - Multi-Cloud Segmentation (2 security domains)
 
 Component | Version
 --- | ---
-Aviatrix Controller | UserConnect-6.5.1922 (6.5)
-Aviatrix Terraform Provider | > 2.20
+Aviatrix Controller | UserConnect-6.5.1922 (6.5) or with version.tf 6.6
+Aviatrix Terraform Provider | > 2.21.2xxxxx
 Terraform | > 1.0.8
 AWS Terraform Provider | > 3.0
 Azure Terraform Provider | > 2.0.0
@@ -28,5 +28,5 @@ Azure Terraform Provider | > 2.0.0
   - TF_VAR_azure_tenant_id
   - TF_VAR_azure_client_id
   - TF_VAR_azure_client_secret 
-<img src="topology.png">
+
 
