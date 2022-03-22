@@ -1,5 +1,5 @@
 ##################################################################
-# Data source to get AMI details
+# Data source to get AMI details                                 #
 ##################################################################
 data "aws_ami" "ubuntu" {
   provider    = aws.london
