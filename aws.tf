@@ -1,5 +1,5 @@
 ##################################################################
-# Data source to get AMI details to build AWS bastion            #
+# Data source to get AMI details to build AWS bastion!           #
 ##################################################################
 data "aws_ami" "ubuntu" {
   provider    = aws.london
