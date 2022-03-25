@@ -45,15 +45,15 @@ resource "azurerm_network_security_rule" "http" {
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
-resource "azurerm_network_security_rule" "samba" {
+resource "azurerm_network_security_rule" "dns" {
   access                      = "Allow"
   direction                   = "Inbound"
-  name                        = "samba"
+  name                        = "dns"
   priority                    = 100
-  protocol                    = "Tcp"
+  protocol                    = "Ucp"
   source_port_range           = "*"
   source_address_prefix       = "*"
-  destination_port_range      = "445"
+  destination_port_range      = "53"
   destination_address_prefix  = "*"
   resource_group_name         = module.azure_spoke_2.vnet.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
