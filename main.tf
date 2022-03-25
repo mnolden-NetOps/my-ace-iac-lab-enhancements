@@ -64,8 +64,10 @@ module "azure_spoke_2" {
   prefix          = false
   suffix          = false
   security_domain = aviatrix_segmentation_security_domain.BU2.domain_name
-  transit_gw      = module.azure_transit_2.transit_gateway.gw_name
 }
+
+# transit_gw      = module.azure_transit_2.transit_gateway.gw_name
+
 
 #module "azure_transit_2" {
 #  source          = "terraform-aviatrix-modules/azure-transit/aviatrix"
