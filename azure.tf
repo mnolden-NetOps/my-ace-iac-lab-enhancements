@@ -50,7 +50,7 @@ resource "azurerm_network_security_rule" "dns" {
   direction                   = "Inbound"
   name                        = "dns"
   priority                    = 100
-  protocol                    = "Ucp"
+  protocol                    = "Udp"
   source_port_range           = "*"
   source_address_prefix       = "*"
   destination_port_range      = "53"
