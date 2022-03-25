@@ -23,7 +23,7 @@ variable "aws_transit1_region" {
 }
 
 variable "aws_transit1_name" {
-  default = "ace-iac"
+  default = "ace-iac-transit1"
 }
 
 variable "aws_transit1_cidr" {
