@@ -64,11 +64,11 @@ module "azure_spoke_2" {
   prefix          = false
   suffix          = false
   security_domain = aviatrix_segmentation_security_domain.BU2.domain_name
-  transit_gw      = module.aws_transit_1.transit_gateway.gw_name
+  transit_gw      = module.azure_transit_2.transit_gateway.gw_name
 }
 
 module "azure_transit_2" {
-  source          = "terraform-aviatrix-modules/azure-spoke/aviatrix"
+  source          = "terraform-aviatrix-modules/azure-transit/aviatrix"
   version         = "4.0.1"
   account         = aviatrix_account.azure_account.account_name
   region          = var.azure_transit2_region
@@ -77,7 +77,7 @@ module "azure_transit_2" {
   instance_size   = var.azure_transit_instance_size
   ha_gw           = var.ha_enabled
   prefix          = false
-  suffix          = false
+  enable_segmentation = true
 }
 
 # Multi-Cloud Segmentation

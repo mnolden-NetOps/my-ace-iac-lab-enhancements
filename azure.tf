@@ -45,20 +45,6 @@ resource "azurerm_network_security_rule" "http" {
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
-resource "azurerm_network_security_rule" "dns" {
-  access                      = "Allow"
-  direction                   = "Inbound"
-  name                        = "dns"
-  priority                    = 100
-  protocol                    = "Udp"
-  source_port_range           = "*"
-  source_address_prefix       = "*"
-  destination_port_range      = "53"
-  destination_address_prefix  = "*"
-  resource_group_name         = module.azure_spoke_2.vnet.resource_group
-  network_security_group_name = azurerm_network_security_group.spoke2-app.name
-}
-
 resource "azurerm_network_security_rule" "ssh" {
   access                      = "Allow"
   direction                   = "Inbound"
@@ -82,6 +68,20 @@ resource "azurerm_network_security_rule" "icmp" {
   source_port_range           = "*"
   source_address_prefix       = "*"
   destination_port_range      = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = module.azure_spoke_2.vnet.resource_group
+  network_security_group_name = azurerm_network_security_group.spoke2-app.name
+}
+
+resource "azurerm_network_security_rule" "dns" {
+  access                      = "Allow"
+  direction                   = "Inbound"
+  name                        = "dns"
+  priority                    = 130
+  protocol                    = "Udp"
+  source_port_range           = "*"
+  source_address_prefix       = "*"
+  destination_port_range      = "53"
   destination_address_prefix  = "*"
   resource_group_name         = module.azure_spoke_2.vnet.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
