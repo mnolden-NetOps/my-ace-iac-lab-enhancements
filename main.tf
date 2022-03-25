@@ -78,7 +78,6 @@ module "azure_transit_2" {
   ha_gw           = var.ha_enabled
   prefix          = false
   suffix          = false
-  /* transit_gw      = module.aws_transit_1.transit_gateway.gw_name /*
 }
 
 # Multi-Cloud Segmentation
