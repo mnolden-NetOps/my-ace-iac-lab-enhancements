@@ -25,6 +25,7 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt-get -y install traceroute unzip build-essential git gcc hping3 apache2 net-tools
 sudo apt autoremove
+sudo apt install python
 sudo /etc/init.d/ssh restart
 sudo echo "<html><h1>Aviatrix is awesome</h1></html>" > /var/www/html/index.html 
 EOF
@@ -37,7 +38,7 @@ module "security_group_1" {
   description         = "Security group for example usage with EC2 instance"
   vpc_id              = module.aws_spoke_1.vpc.vpc_id
   ingress_cidr_blocks = ["0.0.0.0/0"]
-  ingress_rules       = ["http-80-tcp", "ssh-tcp", "all-icmp"]
+  ingress_rules       = ["http-80-tcp", "smb-tcp", "ssh-tcp", "all-icmp"]
   egress_rules        = ["all-all"]
   providers = {
     aws = aws.london

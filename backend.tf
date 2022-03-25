@@ -4,7 +4,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "OrangeBusinessServices_MySandBox"
     workspaces {
-      name = "ace-iac-day-zero"
+      name = "ace-iac-test-enhancements"
     }
   }
 }

@@ -1,17 +1,17 @@
 # ace-iac-test-enhancements
-This repository builds out the following infrastructure for the Aviatrix ACE IaC course:
+This repository builds out the following infrastructure for My Aviatrix ACE IaC Test Enhancements:
 
-- Aviatrix Transit in AWS
-- Aviatrix Spoke in AWS
-- Aviatrix Transit in Azure
-- Aviatrix Spoke in Azure
-- Ubuntu VMs with password authentication (1 per spoke)
+- Aviatrix Transit in AWS LON
+- Aviatrix Spoke in AWS LON
+- Aviatrix Transit in Azure CAN
+- Aviatrix Spoke in Azure CAN
+- Ubuntu VMs with password authentication (1 per SpGw)
 - Multi-Cloud Segmentation (2 security domains)
 
 Component | Version
 --- | ---
-Aviatrix Controller | UserConnect-6.5.1922 (6.5) or with version.tf 6.6
-Aviatrix Terraform Provider | > 2.20 or 2.21.2xxxxx
+Aviatrix Controller | UserConnect-6.5.1922 (6.5)
+Aviatrix Terraform Provider | > 2.20
 Terraform | > 1.0.8
 AWS Terraform Provider | > 3.0
 Azure Terraform Provider | > 2.0.0
@@ -21,7 +21,12 @@ Azure Terraform Provider | > 2.0.0
 - Software version requirements met
 - Aviatrix Controller with Access Accounts defined for AWS
 - Sufficient AWS EIPs for region in scope
-- Account credentials for AWS defined in environment. The following environment variables will be needed:
+- Account credentials for Aviatrix Controller, AWS & Azure defined in environment. The following environment variables will be needed:
+  - controller_ip
+  - username
+  - password
+  - ace-password (for Ubuntu instances)
+  - aws_account_name
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   - TF_VAR_azure_subscription_id
