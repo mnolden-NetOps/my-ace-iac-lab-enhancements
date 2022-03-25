@@ -34,7 +34,6 @@ module "aws_transit_1" {
   prefix              = false
   instance_size       = var.aws_transit_instance_size
   enable_segmentation = true
-  transit_gw          = module.azure_transit_2.transit_gateway.gw_name
 }
 
 # AWS Spoke Modules
@@ -79,7 +78,6 @@ module "azure_transit_2" {
   ha_gw               = var.ha_enabled
   prefix              = false
   enable_segmentation = true
-  transit_gw          = module.aws_transit_1.transit_gateway.gw_name
 }
 
 # Multi-Cloud Segmentation
