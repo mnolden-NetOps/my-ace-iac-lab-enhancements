@@ -67,6 +67,20 @@ module "azure_spoke_2" {
   transit_gw      = module.aws_transit_1.transit_gateway.gw_name
 }
 
+module "azure_transit_2" {
+  source          = "terraform-aviatrix-modules/azure-spoke/aviatrix"
+  version         = "4.0.1"
+  account         = aviatrix_account.azure_account.account_name
+  region          = var.azure_transit2_region
+  name            = var.azure_transit2_name
+  cidr            = var.azure_transit2_cidr
+  instance_size   = var.azure_transit_instance_size
+  ha_gw           = var.ha_enabled
+  prefix          = false
+  suffix          = false
+  /* transit_gw      = module.aws_transit_1.transit_gateway.gw_name /*
+}
+
 # Multi-Cloud Segmentation
 resource "aviatrix_segmentation_security_domain" "BU1" {
   domain_name = "BU1"
