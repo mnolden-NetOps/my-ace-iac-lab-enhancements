@@ -1,12 +1,11 @@
 # ace-iac-test-enhancements
 This repository builds out the following infrastructure for My Aviatrix ACE IaC Test Enhancements:
-
-Aviatrix Transit in AWS LON
-Aviatrix Spoke in AWS LON
-Aviatrix Spoke in Azure CAN
-Ubuntu VMs with password authentication (1 per SpGw)
-Multi-Cloud Segmentation (2 security domains)
-Aviatrix Controller & CoPilot in AWS FRA
+- Aviatrix Transit in AWS LON
+- Aviatrix Spoke in AWS LON
+- Aviatrix Spoke in Azure CAN
+- Ubuntu VMs with password authentication (1 per SpGw)
+- Multi-Cloud Segmentation (2 security domains)
+- Aviatrix Controller & CoPilot in AWS FRA
 
 Component | Version
 Aviatrix Controller | UserConnect-6.5.1922 (6.5)
