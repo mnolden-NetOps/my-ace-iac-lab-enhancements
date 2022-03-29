@@ -9,7 +9,6 @@ Multi-Cloud Segmentation (2 security domains)
 Aviatrix Controller & CoPilot in AWS FRA
 
 Component | Version
---- | ---
 Aviatrix Controller | UserConnect-6.5.1922 (6.5)
 Aviatrix Terraform Provider | > 2.20
 Terraform | > 1.0.8
