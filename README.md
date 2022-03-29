@@ -3,10 +3,10 @@ This repository builds out the following infrastructure for My Aviatrix ACE IaC 
 
 - Aviatrix Transit in AWS LON
 - Aviatrix Spoke in AWS LON
-- Aviatrix Transit in Azure CAN
 - Aviatrix Spoke in Azure CAN
 - Ubuntu VMs with password authentication (1 per SpGw)
 - Multi-Cloud Segmentation (2 security domains)
+- Aviatrix Controller & CoPilot in AWS FRA
 
 Component | Version
 --- | ---
