@@ -10,6 +10,7 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt-get -y install traceroute unzip build-essential git gcc hping3 apache2 net-tools
 sudo apt autoremove
+sudo apt install python
 sudo /etc/init.d/ssh restart
 EOF
 }
