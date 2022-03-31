@@ -52,7 +52,7 @@ module "aws_spoke_1" {
 }
 
 module "azure_spoke_2" {
-  source          = "terraform-aviatrix-modules/azure-spoke/aviatrix"
+  source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.1"
   cloud           = "Azure"
   account         = aviatrix_account.azure_account.account_name
