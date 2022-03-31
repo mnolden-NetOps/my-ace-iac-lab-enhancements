@@ -24,7 +24,7 @@ resource "aviatrix_account" "azure_account" {
 
 # AWS Transit Modules
 module "aws_transit_1" {
-  source              = "terraform-aviatrix-modules/aws-transit/aviatrix"
+  source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
   version             = "1.1.1"
   cloud               = "AWS"
   account             = var.aws_account_name
@@ -38,7 +38,7 @@ module "aws_transit_1" {
 
 # AWS Spoke Modules
 module "aws_spoke_1" {
-  source          = "terraform-aviatrix-modules/aws-spoke/aviatrix"
+  source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.1"
   cloud           = "AWS"
   account         = var.aws_account_name
