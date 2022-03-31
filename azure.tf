@@ -42,7 +42,7 @@ resource "azurerm_network_security_rule" "http" {
   source_address_prefix       = "*"
   destination_port_range      = "80"
   destination_address_prefix  = "*"
-  resource_group_name         = module.azure_spoke_2.vnet.resource_group
+  resource_group_name         = module.azure_spoke_2.vpc.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
@@ -56,7 +56,7 @@ resource "azurerm_network_security_rule" "ssh" {
   source_address_prefix       = "*"
   destination_port_range      = "22"
   destination_address_prefix  = "*"
-  resource_group_name         = module.azure_spoke_2.vnet.resource_group
+  resource_group_name         = module.azure_spoke_2.vpc.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
@@ -70,7 +70,7 @@ resource "azurerm_network_security_rule" "icmp" {
   source_address_prefix       = "*"
   destination_port_range      = "*"
   destination_address_prefix  = "*"
-  resource_group_name         = module.azure_spoke_2.vnet.resource_group
+  resource_group_name         = module.azure_spoke_2.vpc.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
@@ -84,7 +84,7 @@ resource "azurerm_network_security_rule" "dns" {
   source_address_prefix       = "*"
   destination_port_range      = "53"
   destination_address_prefix  = "*"
-  resource_group_name         = module.azure_spoke_2.vnet.resource_group
+  resource_group_name         = module.azure_spoke_2.vpc.resource_group
   network_security_group_name = azurerm_network_security_group.spoke2-app.name
 }
 
@@ -95,7 +95,7 @@ resource "azurerm_network_interface_security_group_association" "main" {
 
 resource "azurerm_linux_virtual_machine" "azure_spoke2_vm" {
   name                            = "${var.azure_spoke2_name}-app"
-  resource_group_name             = module.azure_spoke_2.vnet.resource_group
+  resource_group_name             = module.azure_spoke_2.vpc.resource_group
   location                        = var.azure_spoke2_region
   size                            = var.azure_test_instance_size
   admin_username                  = "ubuntu"
