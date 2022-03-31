@@ -86,6 +86,28 @@ variable "azure_test_instance_size" {
   default = "Standard_B1ms"
 }
 
+variable "gcp_account_name" {
+}
+
+variable "gcp_project_id" {
+}
+
+variable "gcp_spoke_instance_size" {
+  default = "n1-standard-1"
+}
+
+variable "gcp_spoke3_region" {
+  default = "asia-southeast1"
+}
+
+variable "gcp_spoke3_name" {
+  default = "ace-iac-spoke3"
+}
+
+variable "gcp_spoke3_cidr" {
+  default = "10.1.221.0/24"
+}
+
 variable "ace_ec2_key_name" {
   default = "ACE_TEST_MN"
 }

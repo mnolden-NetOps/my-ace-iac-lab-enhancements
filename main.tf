@@ -22,7 +22,15 @@ resource "aviatrix_account" "azure_account" {
   arm_application_key = var.azure_client_secret
 }
 
-# AWS Transit Modules
+# Create an Aviatrix GCP Account
+resource "aviatrix_account" "gcp_account" {
+  account_name                        = var.gcp_account_name
+  cloud_type                          = 4
+  gcloud_project_id                   = var.gcp_project_id
+  gcloud_project_credentials_filepath = "/home/ubuntu/test_gcp/keen-extension-345815.json"
+}
+
+# Create an Aviatrix Transit Gateway in AWS
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
   version             = "1.1.0"
@@ -36,7 +44,7 @@ module "aws_transit_1" {
   enable_segmentation = true
 }
 
-# AWS Spoke Modules
+# Create an Aviatrix Spoke Gateway in AWS
 module "aws_spoke_1" {
   source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.0"
@@ -51,6 +59,7 @@ module "aws_spoke_1" {
   transit_gw      = module.aws_transit_1.transit_gateway.gw_name
 }
 
+# Create an Aviatrix Spoke Gateway in Azure
 module "azure_spoke_2" {
   source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.0"
@@ -62,6 +71,21 @@ module "azure_spoke_2" {
   instance_size   = var.azure_spoke_instance_size
   ha_gw           = var.ha_enabled
   security_domain = aviatrix_segmentation_security_domain.BU2.domain_name
+  transit_gw      = module.aws_transit_1.transit_gateway.gw_name
+}
+
+# Create an Aviatrix Spoke Gateway in GCP
+module "gcp_spoke_3" {
+  source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
+  version         = "1.1.0"
+  cloud           = "GCP"
+  account         = aviatrix_account.gcp_account.account_name
+  region          = var.gcp_spoke2_region
+  name            = var.gcp_spoke2_name
+  cidr            = var.gcp_spoke2_cidr
+  instance_size   = var.gcp_spoke_instance_size
+  ha_gw           = var.ha_enabled
+  security_domain = aviatrix_segmentation_security_domain.BU1.domain_name
   transit_gw      = module.aws_transit_1.transit_gateway.gw_name
 }
 
