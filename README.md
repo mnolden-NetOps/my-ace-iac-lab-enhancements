@@ -1,4 +1,4 @@
-# my ace-iac-lab-enhancements
+### my ace-iac-lab-enhancements
 This repository builds out the following infrastructure for My Aviatrix ACE IaC Test Enhancements:
 - Aviatrix Transit in AWS LON
 - Aviatrix Spoke in AWS LON
@@ -14,8 +14,7 @@ Component | Version
 - AWS Terraform Provider | > 3.0
 - Azure Terraform Provider | > 2.0.0
 
-### Dependencies
-
+### dependencies
 - Software version requirements met
 - Aviatrix Controller with Access Accounts defined for AWS
 - Sufficient AWS EIPs for region in scope
