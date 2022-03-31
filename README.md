@@ -1,5 +1,7 @@
 ### my ace-iac-lab-enhancements
-This repository builds out the following infrastructure for My Aviatrix ACE IaC Test Enhancements:
+My Aviatrix Infrastructure as Code Lab Enhancements beyond the Aviatrix Certified Enginner Infrastructure as Code Portal - Lab 1 to Lab 3
+
+This repository builds out the following infrastructure for My Aviatrix Infrastructure as Code Lab Enhancements:
 - Aviatrix Transit in AWS LON
 - Aviatrix Spoke in AWS LON
 - Aviatrix Spoke in Azure CAN
