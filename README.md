@@ -8,11 +8,11 @@ This repository builds out the following infrastructure for My Aviatrix ACE IaC 
 - Aviatrix Controller & CoPilot in AWS FRA
 
 Component | Version
-Aviatrix Controller | UserConnect-6.6.5413 (6.6)
-Aviatrix Terraform Provider | > 2.21.1
-Terraform | > 1.0.8
-AWS Terraform Provider | > 3.0
-Azure Terraform Provider | > 2.0.0
+- Aviatrix Controller | UserConnect-6.6.5413 (6.6)
+- Aviatrix Terraform Provider | > 2.21.1
+- Terraform | > 1.0.8
+- AWS Terraform Provider | > 3.0
+- Azure Terraform Provider | > 2.0.0
 
 ### Dependencies
 
