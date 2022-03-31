@@ -1,4 +1,4 @@
-# ace-iac-test-enhancements
+# my ace-iac-lab-enhancements
 This repository builds out the following infrastructure for My Aviatrix ACE IaC Test Enhancements:
 - Aviatrix Transit in AWS LON
 - Aviatrix Spoke in AWS LON
@@ -8,8 +8,8 @@ This repository builds out the following infrastructure for My Aviatrix ACE IaC 
 - Aviatrix Controller & CoPilot in AWS FRA
 
 Component | Version
-Aviatrix Controller | UserConnect-6.5.1922 (6.5)
-Aviatrix Terraform Provider | > 2.20
+Aviatrix Controller | UserConnect-6.6.5413 (6.6)
+Aviatrix Terraform Provider | > 2.21.1
 Terraform | > 1.0.8
 AWS Terraform Provider | > 3.0
 Azure Terraform Provider | > 2.0.0
