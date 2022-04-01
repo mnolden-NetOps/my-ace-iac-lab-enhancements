@@ -22,14 +22,6 @@ resource "aviatrix_account" "azure_account" {
   arm_application_key = var.azure_client_secret
 }
 
-# Create an Aviatrix GCP Account
-resource "aviatrix_account" "gcp_account" {
-  account_name                        = var.gcp_account_name
-  cloud_type                          = 4
-  gcloud_project_id                   = var.gcp_project_id
-  gcloud_project_credentials_filepath = "/home/ubuntu/test_gcp/keen-extension-345815.json"
-}
-
 # Create an Aviatrix Transit Gateway in AWS
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"

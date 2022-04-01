@@ -16,3 +16,8 @@ provider "azurerm" {
   client_secret   = var.azure_client_secret
   tenant_id       = var.azure_tenant_id
 }
+
+provider "google" {
+  project     = var.gcp_project_id
+  region      = var.gcp_spoke3_region
+}
