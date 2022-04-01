@@ -22,7 +22,7 @@ Azure Terraform Provider | > 2.0.0
 - Software version requirements met
 - Aviatrix Controller with Access Accounts defined for AWS
 - Sufficient AWS EIPs for region in scope
-- Account credentials for Aviatrix Controller, AWS & Azure defined in environment. 
+- Account credentials for Aviatrix Controller, AWS, Azure & GCP defined in environment. 
 
 The following Terrafrom variables will be needed:
   - controller_ip
