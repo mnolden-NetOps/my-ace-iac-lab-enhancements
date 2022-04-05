@@ -72,9 +72,9 @@ module "gcp_spoke_3" {
   version         = "1.1.2"
   cloud           = "GCP"
   account         = aviatrix_account.gcp_account.account_name
-  region          = var.gcp_spoke2_region
-  name            = var.gcp_spoke2_name
-  cidr            = var.gcp_spoke2_cidr
+  region          = var.gcp_spoke3_region
+  name            = var.gcp_spoke3_name
+  cidr            = var.gcp_spoke3_cidr
   instance_size   = var.gcp_spoke_instance_size
   ha_gw           = var.ha_enabled
   security_domain = aviatrix_segmentation_security_domain.BU1.domain_name
