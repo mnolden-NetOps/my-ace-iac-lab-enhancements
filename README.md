@@ -29,7 +29,7 @@ The following Terrafrom variables will be needed:
   - controller_ip
   - username
   - password
-  - ace-password (for Ubuntu instances)
+  - ace_password (for Ubuntu instances)
   - aws_account_name
   - gcp_account_name
   - gcp_project_id
