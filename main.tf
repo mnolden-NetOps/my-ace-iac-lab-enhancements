@@ -71,7 +71,7 @@ module "gcp_spoke_3" {
   source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.2"
   cloud           = "GCP"
-  account         = aviatrix_account.gcp_account.account_name
+  account         = var.gcp_account_name
   region          = var.gcp_spoke3_region
   name            = var.gcp_spoke3_name
   cidr            = var.gcp_spoke3_cidr
