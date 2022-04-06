@@ -46,7 +46,7 @@ module "azure_spoke_2" {
   source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.1.2"
   cloud           = "Azure"
-  account         = aviatrix_account.azure_account.account_name
+  account         = var.azure_account_name
   region          = var.azure_spoke2_region
   name            = var.azure_spoke2_name
   cidr            = var.azure_spoke2_cidr
