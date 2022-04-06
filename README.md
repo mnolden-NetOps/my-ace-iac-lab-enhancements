@@ -1,7 +1,7 @@
 ### my ace-iac-lab-enhancements
 My Aviatrix Infrastructure as Code Lab Enhancements beyond the Aviatrix Certified Enginner Infrastructure as Code Portal - Lab 1 to Lab 3.
 
-This repository uses GitHub Actions combined with Terraform Cloud as an aproach to achieve an automated ‘Infrastructure as Code’ (IaC) workflow helps to reduce the possibility of human error and ensures our deployment time is kept minimal.
+This repository uses GitHub Actions combined with Terraform Cloud as an aproach to achieve an automated ‘Infrastructure as Code’ (IaC) workflow that helps to reduce the possibility of human error and ensures our deployment time is kept minimal.
 
 This repository builds out the following infrastructure for My Aviatrix Infrastructure as Code Lab Enhancements:
 - Aviatrix Transit in AWS LON
