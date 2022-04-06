@@ -12,16 +12,6 @@ resource "aws_key_pair" "ace_key" {
   public_key = tls_private_key.avtx_key.public_key_openssh
 }
 
-# Create an Aviatrix Azure Account
-resource "aviatrix_account" "azure_account" {
-  account_name        = var.azure_account_name
-  cloud_type          = 8
-  arm_subscription_id = var.azure_subscription_id
-  arm_directory_id    = var.azure_tenant_id
-  arm_application_id  = var.azure_client_id
-  arm_application_key = var.azure_client_secret
-}
-
 # Create an Aviatrix Transit Gateway in AWS
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
