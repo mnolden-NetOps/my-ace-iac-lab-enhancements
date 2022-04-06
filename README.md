@@ -5,9 +5,9 @@ This repository uses GitHub Actions combined with Terraform Cloud as an aproach 
 
 This repository builds out the following infrastructure for My Aviatrix Infrastructure as Code Lab Enhancements:
 - Aviatrix Transit in AWS LON
-- Aviatrix Spoke in AWS LON
-- Aviatrix Spoke in Azure CAN
-- Aviatrix Spoke in GCP SIN
+- Aviatrix Spoke 1 in AWS LON
+- Aviatrix Spoke 2 in Azure CAN
+- Aviatrix Spoke 3 in GCP SIN
 - Ubuntu VMs & Bastion with password authentication (1 per SpGw)
 - Multi-Cloud Segmentation (2 security domains)
 - Aviatrix Controller & CoPilot in AWS FRA
